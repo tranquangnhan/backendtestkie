@@ -11,7 +11,7 @@ router.post('/sendemail', function(req, res, next) {
       port: 465,
       secure: true,
       auth: {
-        user: 'thanhnutruyenky86@gmail.com',
+        user: 'tranquangnhan1606@gmail.com',
         pass: 'Tranquangnhan@1606'
       }
     });
