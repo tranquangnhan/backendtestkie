@@ -7,8 +7,9 @@ router.post('/sendemail', function(req, res, next) {
     const toEmail = req.body.toemail;
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
-  
+      service: 'Gmail',
+      port: 465,
+      secure: true,
       auth: {
         user: 'thanhnutruyenky86@gmail.com',
         pass: 'Tranquangnhan@1606'
