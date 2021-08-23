@@ -26,7 +26,8 @@ router.post('/sendemail', function(req, res, next) {
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         res.json({
-          msg: 'fail'
+          msg: 'fail',
+          bug: error
         });
       } 
       else{
@@ -44,8 +45,10 @@ router.post('/sendemail', function(req, res, next) {
         transporter.sendMail(mailOptions, function(error, info){
           if (error) {
             res.json({
-              msg: 'fail'
+              msg: 'fail',
+              bug: error
             });
+            console.log(error)
           }  else{
             res.json({
               msg: 'success'
