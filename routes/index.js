@@ -7,12 +7,16 @@ router.post('/sendemail', function(req, res, next) {
     const toEmail = req.body.toemail;
 
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: 'gmail',
       port: 587,
       secure: true,
       auth: {
-        user: 'thanhnutruyenky86@gmail.com',
-        pass: 'Tranquangnhan@1606'
+        type: "OAuth2",
+        user: 'tranquangnhan1606@gmail.com',
+        pass: 'Quangnhan@1606',
+        clientId: '31956089141-j8ffehte0qessvhtng3tfshisen2ncjl.apps.googleusercontent.com',
+        clientSecret: 'QF9EqTmJ3rpg7WFbF-D-peQL',
+        refreshToken: '1//04SoHeXp7MMw8CgYIARAAGAQSNwF-L9Ir10O30_tXp3AyrG9mht4xqkk3bGOlmFssU7LhTI2n3YB8gxo-lZkR0hd4vig8ceZo1pA',
       }
     });
 
